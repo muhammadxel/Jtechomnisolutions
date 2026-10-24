@@ -1,12 +1,813 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JTech - Coming Soon</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J-Tech Omni Solutions | Enterprise Tech, Data, AI & Digital Systems</title>
+
+  <!-- Primary Meta Tags & SEO -->
+  <meta name="title" content="J-Tech Omni Solutions | Enterprise Tech, Data, AI & Digital Systems" />
+  <meta name="description" content="Leading enterprise technology solutions, intelligent data pipelines, AI business automation, corporate design, and ICT procurement in Kaduna, Nigeria." />
+  <meta name="theme-color" content="#9333ea" />
+
+  <!-- Open Graph & Social Cards -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="J-Tech Omni Solutions | Enterprise Tech, Data & Digital Systems" />
+  <meta property="og:description" content="Empowering businesses, public agencies, and organizations with next-generation ICT, data intelligence, and AI integration." />
+  <meta property="og:image" content="jtech%20logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="jtech%20logo.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="jtech%20logo.png" />
+  <link rel="shortcut icon" href="jtech%20logo.png" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <!-- AOS (Animate on Scroll) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              purple: '#9333ea',
+              magenta: '#c026d3',
+              blue: '#2563eb',
+              darkBlue: '#1e3a8a',
+              dark: '#030712',
+              card: '#0b1120',
+              border: '#1e293b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .glow-magenta { box-shadow: 0 0 35px -8px rgba(192, 38, 211, 0.35); }
+    .glow-blue { box-shadow: 0 0 35px -8px rgba(37, 99, 235, 0.35); }
+    .tech-border-glow {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .tech-border-glow:hover {
+      box-shadow: 0 12px 30px -10px rgba(147, 51, 234, 0.35);
+      border-color: rgba(192, 38, 211, 0.55);
+    }
+  </style>
 </head>
-<body style="font-family: sans-serif; display: grid; place-content: center; height: 100vh; margin: 0; background: #0f172a; color: white;">
-  <h1>Jtechomnisolutions Website is Under Construction</h1>
-  <p>Live deployment active.</p>
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-brand-magenta selection:text-white overflow-x-hidden">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-brand-purple via-brand-magenta to-brand-blue py-1.5 px-4 text-center text-xs font-semibold text-white tracking-wide shadow-md">
+    <span>Enterprise Registration BN: 8763933 &bull; Kaduna, Nigeria &bull; Available for National Contracts & Projects</span>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="sticky top-0 z-50 bg-brand-dark/95 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <img src="jtech logo.png" alt="J-Tech Omni Solutions" class="h-12 w-auto object-contain drop-shadow transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'" />
+        <div>
+          <span class="text-xl font-extrabold tracking-tight text-white block leading-none">
+            J-TECH <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-magenta to-brand-purple">OMNI</span>
+          </span>
+          <span class="text-[10px] tracking-widest text-slate-400 uppercase font-bold">Solutions</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#services" class="hover:text-brand-magenta transition-colors">Services</a>
+        <a href="#about" class="hover:text-brand-magenta transition-colors">About Us</a>
+        <a href="#process" class="hover:text-brand-magenta transition-colors">How We Work</a>
+        <a href="#industries" class="hover:text-brand-magenta transition-colors">Industries</a>
+        <a href="#projects" class="hover:text-brand-magenta transition-colors">Projects</a>
+        <a href="#insights" class="hover:text-brand-magenta transition-colors">Insights</a>
+        <a href="#faqs" class="hover:text-brand-magenta transition-colors">FAQs</a>
+      </nav>
+
+      <!-- Desktop Contact CTA -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="https://wa.me/2349078845696?text=Hello%20J-Tech%20Omni%20Solutions,%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" class="px-5 py-2.5 text-xs font-semibold uppercase tracking-wider rounded-lg bg-gradient-to-r from-brand-purple to-brand-magenta hover:opacity-90 text-white transition-all shadow-lg shadow-purple-600/25 flex items-center gap-2">
+          <i class="ph-fill ph-whatsapp-logo text-base"></i>
+          <span>Get in Touch</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Menu Button -->
+      <button id="mobileMenuBtn" class="lg:hidden text-2xl text-slate-300 hover:text-white p-2 focus:outline-none" aria-label="Toggle Navigation Menu">
+        <i id="menuIcon" class="ph ph-list"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-slate-950/98 border-b border-slate-800 px-6 py-6 transition-all duration-300">
+      <nav class="flex flex-col gap-4 text-base font-medium text-slate-300">
+        <a href="#services" class="mobile-nav-link hover:text-brand-magenta py-1">Services</a>
+        <a href="#about" class="mobile-nav-link hover:text-brand-magenta py-1">About Us</a>
+        <a href="#process" class="mobile-nav-link hover:text-brand-magenta py-1">How We Work</a>
+        <a href="#industries" class="mobile-nav-link hover:text-brand-magenta py-1">Industries</a>
+        <a href="#projects" class="mobile-nav-link hover:text-brand-magenta py-1">Projects</a>
+        <a href="#insights" class="mobile-nav-link hover:text-brand-magenta py-1">Insights</a>
+        <a href="#faqs" class="mobile-nav-link hover:text-brand-magenta py-1">FAQs</a>
+        <a href="#contact" class="mobile-nav-link hover:text-brand-magenta py-1">Contact</a>
+        <a href="https://wa.me/2349078845696?text=Hello%20J-Tech%20Omni%20Solutions,%20I%20would%20like%20to%20inquire%20about%20your%20services." target="_blank" class="mt-2 text-center py-3 text-xs font-bold uppercase tracking-wider rounded-lg bg-gradient-to-r from-brand-purple to-brand-magenta text-white shadow-lg">
+          Chat on WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 1. Hero Section -->
+  <section class="relative pt-24 pb-20 px-6 overflow-hidden">
+    <div class="absolute top-10 left-1/4 w-96 h-96 bg-brand-purple/20 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
+    <div class="absolute top-32 right-1/4 w-96 h-96 bg-brand-blue/20 rounded-full blur-3xl pointer-events-none animate-pulse" style="animation-duration: 4s;"></div>
+
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div data-aos="fade-down" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-purple-300 mb-8 shadow-inner">
+        <span class="w-2 h-2 rounded-full bg-brand-magenta animate-ping"></span>
+        Enterprise Tech, Data & Systems Architecture
+      </div>
+
+      <h1 data-aos="fade-up" class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white mb-6 leading-tight">
+        Building the Digital & Data Systems <br class="hidden sm:block"/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400">Your Organization Runs On</span>
+      </h1>
+
+      <p data-aos="fade-up" data-aos-delay="200" class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+        J-Tech Omni Solutions architects custom web platforms, automated AI workflows, business intelligence pipelines, and reliable corporate procurement for institutions across Nigeria.
+      </p>
+
+      <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-purple to-brand-blue text-white font-bold hover:opacity-95 hover:scale-105 transition-all duration-300 shadow-xl shadow-purple-600/25 flex items-center justify-center gap-2">
+          <span>Explore Capabilities</span>
+          <i class="ph ph-arrow-right"></i>
+        </a>
+        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-semibold transition-all duration-300">
+          Request Project Consultation
+        </a>
+      </div>
+
+      <!-- Quick Stats Strip -->
+      <div data-aos="fade-up" data-aos-delay="400" class="mt-16 pt-8 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
+        <div>
+          <div class="text-2xl font-black text-white">6+ Practice Areas</div>
+          <div class="text-xs text-slate-400 mt-1">End-to-End ICT & Data</div>
+        </div>
+        <div>
+          <div class="text-2xl font-black text-brand-magenta">100% Owned</div>
+          <div class="text-xs text-slate-400 mt-1">Zero Vendor Lock-In</div>
+        </div>
+        <div>
+          <div class="text-2xl font-black text-blue-400">Rapid Delivery</div>
+          <div class="text-xs text-slate-400 mt-1">Milestone-Based Execution</div>
+        </div>
+        <div>
+          <div class="text-2xl font-black text-purple-400">BN 8763933</div>
+          <div class="text-xs text-slate-400 mt-1">Government Registered</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Core Services Section -->
+  <section id="services" class="py-24 px-6 bg-slate-950/60 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto">
+      <div data-aos="fade-up" class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs uppercase tracking-widest text-brand-magenta font-bold mb-3">Core Solutions</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-white">Comprehensive Digital & Technical Capabilities</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service 1: ICT & IT Solutions -->
+        <div data-aos="fade-up" data-aos-delay="100" class="tech-border-glow p-8 rounded-2xl bg-brand-card border border-slate-800 transition-all hover:-translate-y-2 group">
+          <div class="w-14 h-14 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-purple-500/20 transition-all">
+            <i class="ph ph-laptop"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">ICT & IT Solutions</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Custom website design, web applications, corporate IT support, networking, equipment supply, and enterprise IT strategy.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-2 font-medium">
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-magenta"></i> Fast, Responsive Web Portals</li>
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-magenta"></i> Enterprise IT Support & Setup</li>
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-magenta"></i> ICT Hardware & Infrastructure</li>
+          </ul>
+        </div>
+
+        <!-- Service 2: Data Management & BI -->
+        <div data-aos="fade-up" data-aos-delay="200" class="tech-border-glow p-8 rounded-2xl bg-brand-card border border-slate-800 transition-all hover:-translate-y-2 group">
+          <div class="w-14 h-14 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-blue-500/20 transition-all">
+            <i class="ph ph-chart-polar"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Data Analytics & BI</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            End-to-end data pipelines: data cleaning, structured database systems, executive Power BI dashboards, and actionable reporting.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-2 font-medium">
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-blue-400"></i> Interactive Power BI Dashboards</li>
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-blue-400"></i> Data Auditing & Cleaning</li>
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-blue-400"></i> Institutional Reporting Models</li>
+          </ul>
+        </div>
+
+        <!-- Service 3: AI Integration & Orchestration -->
+        <div data-aos="fade-up" data-aos-delay="300" class="tech-border-glow p-8 rounded-2xl bg-brand-card border border-slate-800 transition-all hover:-translate-y-2 group">
+          <div class="w-14 h-14 rounded-xl bg-pink-500/10 text-pink-400 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-pink-500/20 transition-all">
+            <i class="ph ph-sparkle"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">AI Integration & Automation</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Automating manual bottlenecks. We integrate intelligent AI workflows, automated document handlers, and custom AI agents.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-2 font-medium">
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-pink-400"></i> Business Process Automation</li>
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-pink-400"></i> AI Agent Tool Orchestration</li>
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-pink-400"></i> Document Extraction Workflows</li>
+          </ul>
+        </div>
+
+        <!-- Service 4: Creative & Digital Design -->
+        <div data-aos="fade-up" data-aos-delay="100" class="tech-border-glow p-8 rounded-2xl bg-brand-card border border-slate-800 transition-all hover:-translate-y-2 group">
+          <div class="w-14 h-14 rounded-xl bg-fuchsia-500/10 text-brand-magenta flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-fuchsia-500/20 transition-all">
+            <i class="ph ph-paint-brush-broad"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Creative & Digital Design</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Corporate identity and multi-page graphic layouts, pitch decks, investor profiles, branding assets, and marketing visuals.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-2 font-medium">
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-magenta"></i> Corporate Profile Documents</li>
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-magenta"></i> Visual Brand Identity Systems</li>
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-brand-magenta"></i> Infographics & Presentation Decks</li>
+          </ul>
+        </div>
+
+        <!-- Service 5: Publishing & Document Services -->
+        <div data-aos="fade-up" data-aos-delay="200" class="tech-border-glow p-8 rounded-2xl bg-brand-card border border-slate-800 transition-all hover:-translate-y-2 group">
+          <div class="w-14 h-14 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-indigo-500/20 transition-all">
+            <i class="ph ph-book-open-text"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Publishing & Documents</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Full-spectrum publication support: Amazon KDP prep, professional manuscript formatting, document review, and commercial print.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-2 font-medium">
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-indigo-400"></i> Amazon KDP Ebook & Paperback</li>
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-indigo-400"></i> Structural Manuscript Typesetting</li>
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-indigo-400"></i> Institutional Document Production</li>
+          </ul>
+        </div>
+
+        <!-- Service 6: General Contracts & Supply -->
+        <div data-aos="fade-up" data-aos-delay="300" class="tech-border-glow p-8 rounded-2xl bg-brand-card border border-slate-800 transition-all hover:-translate-y-2 group">
+          <div class="w-14 h-14 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-cyan-500/20 transition-all">
+            <i class="ph ph-truck"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">General Contracts & Supply</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Certified equipment supply, IT and office furniture procurement, contract fulfillment, and logistics support for public & private firms.
+          </p>
+          <ul class="text-xs text-slate-400 space-y-2 font-medium">
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-cyan-400"></i> ICT Hardware & Peripherals Supply</li>
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-cyan-400"></i> Corporate Office Equipment</li>
+            <li class="flex items-center gap-2"><i class="ph-bold ph-check text-cyan-400"></i> Procurement & Contract Bidding</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. About Us Preview (Mission, Vision, Values) -->
+  <section id="about" class="py-24 px-6 border-t border-slate-900 relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div data-aos="fade-right" class="lg:col-span-6 space-y-6">
+          <h2 class="text-xs uppercase tracking-widest text-brand-magenta font-bold">About J-Tech Omni Solutions</h2>
+          <h3 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+            Bridging High-Grade Technology With Practical Business Value
+          </h3>
+          <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+            Incorporated as a registered enterprise in Kaduna, Nigeria, J-Tech Omni Solutions is built on a clear premise: modern tech, clean data, and automated workflows shouldn't be reserved for foreign conglomerates alone.
+          </p>
+          <p class="text-slate-400 leading-relaxed text-sm">
+            We partner with businesses, public sector bodies, and growing ventures to design software architectures, organize unstructured data into decision-ready dashboards, and execute rigorous procurement with zero compromises.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 pt-4">
+            <div class="p-4 rounded-xl bg-brand-card border border-slate-800">
+              <div class="text-brand-magenta font-bold text-lg mb-1">Our Mission</div>
+              <p class="text-xs text-slate-400 leading-relaxed">To accelerate African enterprise efficiency through reliable tech, data integrity, and intelligent automation.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-brand-card border border-slate-800">
+              <div class="text-blue-400 font-bold text-lg mb-1">Our Vision</div>
+              <p class="text-xs text-slate-400 leading-relaxed">To become the trusted benchmark in enterprise ICT solutions, analytics, and contracting across Nigeria.</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-aos="fade-left" class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div class="p-6 rounded-2xl bg-brand-card border border-slate-800">
+            <i class="ph-bold ph-shield-check text-2xl text-brand-magenta mb-3 block"></i>
+            <h4 class="font-bold text-white mb-2">Unwavering Integrity</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">Transparent scoping, itemized pricing, and adherence to regulatory standards on every engagement.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-brand-card border border-slate-800">
+            <i class="ph-bold ph-lightning text-2xl text-blue-400 mb-3 block"></i>
+            <h4 class="font-bold text-white mb-2">Technical Excellence</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">Modern toolsets (Tailwind, Power BI, Python, AI APIs) engineered for high uptime and speed.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-brand-card border border-slate-800">
+            <i class="ph-bold ph-lock-key text-2xl text-purple-400 mb-3 block"></i>
+            <h4 class="font-bold text-white mb-2">Full Client Ownership</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">You own 100% of the code, dashboards, files, and repositories upon project sign-off. Zero lock-in.</p>
+          </div>
+          <div class="p-6 rounded-2xl bg-brand-card border border-slate-800">
+            <i class="ph-bold ph-headset text-2xl text-cyan-400 mb-3 block"></i>
+            <h4 class="font-bold text-white mb-2">Post-Launch Support</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">Direct support, maintenance, and retraining so your team never feels abandoned after deployment.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. How We Work (6-Step Delivery Framework like Laubraco) -->
+  <section id="process" class="py-24 px-6 bg-slate-950/70 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto">
+      <div data-aos="fade-up" class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs uppercase tracking-widest text-brand-magenta font-bold mb-3">Our Methodology</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-white">How We Deliver Predictable Results</p>
+        <p class="text-sm text-slate-400 mt-3">From the initial discovery call to final deployment, we follow a transparent milestone process.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div data-aos="fade-up" data-aos-delay="100" class="p-6 rounded-2xl bg-brand-card border border-slate-800 relative">
+          <span class="text-3xl font-black text-purple-500/30">01</span>
+          <h4 class="text-lg font-bold text-white mt-3 mb-2">Discovery & Audit</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">We assess your existing operational workflows, identify data gaps or technical hurdles, and clarify actual business goals.</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200" class="p-6 rounded-2xl bg-brand-card border border-slate-800 relative">
+          <span class="text-3xl font-black text-purple-500/30">02</span>
+          <h4 class="text-lg font-bold text-white mt-3 mb-2">Architecture & Scope</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">We present a written technical specification, user journey, and itemized scope so everyone is aligned before work starts.</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="300" class="p-6 rounded-2xl bg-brand-card border border-slate-800 relative">
+          <span class="text-3xl font-black text-purple-500/30">03</span>
+          <h4 class="text-lg font-bold text-white mt-3 mb-2">Build & Clean</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">Software, websites, or data dashboards are constructed iteratively. You get hands-on milestone previews to test along the way.</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100" class="p-6 rounded-2xl bg-brand-card border border-slate-800 relative">
+          <span class="text-3xl font-black text-blue-500/30">04</span>
+          <h4 class="text-lg font-bold text-white mt-3 mb-2">Automate & Orchestrate</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">We connect automated alerts, AI data parsers, and API integrations so repetitive manual entries run themselves.</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200" class="p-6 rounded-2xl bg-brand-card border border-slate-800 relative">
+          <span class="text-3xl font-black text-blue-500/30">05</span>
+          <h4 class="text-lg font-bold text-white mt-3 mb-2">Testing & Handover</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">Rigorous mobile, security, and performance testing followed by complete transfer of repository access and documentation.</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="300" class="p-6 rounded-2xl bg-brand-card border border-slate-800 relative">
+          <span class="text-3xl font-black text-blue-500/30">06</span>
+          <h4 class="text-lg font-bold text-white mt-3 mb-2">Support & Scaling</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">Ongoing maintenance, system upgrades, and technical guidance as your organizational volume expands.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Industries We Serve -->
+  <section id="industries" class="py-24 px-6 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto">
+      <div data-aos="fade-up" class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs uppercase tracking-widest text-brand-magenta font-bold mb-3">Domain Experience</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-white">Industries We Serve</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div data-aos="zoom-in" data-aos-delay="100" class="p-6 rounded-2xl bg-brand-card border border-slate-800">
+          <i class="ph-bold ph-buildings text-3xl text-purple-400 mb-4 block"></i>
+          <h4 class="text-lg font-bold text-white mb-2">Government & Public Sector</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">Governance framework documentation, institutional reporting systems, revenue flow tracking, and compliant procurement.</p>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="200" class="p-6 rounded-2xl bg-brand-card border border-slate-800">
+          <i class="ph-bold ph-graduation-cap text-3xl text-blue-400 mb-4 block"></i>
+          <h4 class="text-lg font-bold text-white mb-2">Education & Research</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">Student databases, automated result tabulation, CBT test infrastructures, and academic publishing services.</p>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="300" class="p-6 rounded-2xl bg-brand-card border border-slate-800">
+          <i class="ph-bold ph-first-aid text-3xl text-pink-400 mb-4 block"></i>
+          <h4 class="text-lg font-bold text-white mb-2">Healthcare Providers</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">Patient record digitization, medical supply inventory management, and operational analytics for clinics and labs.</p>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="100" class="p-6 rounded-2xl bg-brand-card border border-slate-800">
+          <i class="ph-bold ph-storefront text-3xl text-cyan-400 mb-4 block"></i>
+          <h4 class="text-lg font-bold text-white mb-2">SMEs & Startups</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">High-converting websites, WhatsApp customer ordering workflows, business email hosting, and brand collateral.</p>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="200" class="p-6 rounded-2xl bg-brand-card border border-slate-800">
+          <i class="ph-bold ph-globe-hemisphere-west text-3xl text-brand-magenta mb-4 block"></i>
+          <h4 class="text-lg font-bold text-white mb-2">NGOs & Development Agencies</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">Field data collection, monitoring & evaluation (M&E) interactive dashboards, grant donor reporting, and infographics.</p>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="300" class="p-6 rounded-2xl bg-brand-card border border-slate-800">
+          <i class="ph-bold ph-briefcase text-3xl text-indigo-400 mb-4 block"></i>
+          <h4 class="text-lg font-bold text-white mb-2">Corporate Organizations</h4>
+          <p class="text-slate-400 text-xs leading-relaxed">Automated document pipelines, IT equipment contracting, executive presentations, and multi-department analytics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Featured Projects & Case Studies -->
+  <section id="projects" class="py-24 px-6 bg-slate-950/70 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto">
+      <div data-aos="fade-right" class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <h2 class="text-xs uppercase tracking-widest text-brand-magenta font-bold mb-2">Case Studies</h2>
+          <p class="text-3xl font-extrabold text-white">Featured Technical Deployments</p>
+        </div>
+        <p class="text-xs text-slate-400 mt-2 md:mt-0 font-mono">Real-world institutional impact</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div data-aos="zoom-in" data-aos-delay="100" class="tech-border-glow p-6 rounded-2xl bg-brand-card border border-slate-800 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-bold text-purple-400 bg-purple-900/30 px-2.5 py-1 rounded">Data & Public Sector</span>
+            <h4 class="text-lg font-bold text-white mt-4 mb-2">Revenue Governance & Flow Systems</h4>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              Structured multi-tier financial flow diagrams, operational documentation, and tracking frameworks for state environmental protection authorities.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800 text-[11px] text-brand-magenta font-semibold flex items-center justify-between">
+            <span>Result: 40% Reporting Efficiency</span>
+            <i class="ph ph-arrow-up-right text-base"></i>
+          </div>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="200" class="tech-border-glow p-6 rounded-2xl bg-brand-card border border-slate-800 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-bold text-blue-400 bg-blue-900/30 px-2.5 py-1 rounded">BI & Visual Analytics</span>
+            <h4 class="text-lg font-bold text-white mt-4 mb-2">15-Page Budget Infographic Framework</h4>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              Designed structured departmental infographics and public visual reports for Bureau of Statistics budget and planning wings.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800 text-[11px] text-blue-400 font-semibold flex items-center justify-between">
+            <span>Result: Published & Distributed</span>
+            <i class="ph ph-arrow-up-right text-base"></i>
+          </div>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="300" class="tech-border-glow p-6 rounded-2xl bg-brand-card border border-slate-800 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-bold text-pink-400 bg-pink-900/30 px-2.5 py-1 rounded">Publishing & Consultancy</span>
+            <h4 class="text-lg font-bold text-white mt-4 mb-2">100+ Page Waste Consultancy Framework</h4>
+            <p class="text-slate-400 text-xs leading-relaxed mb-4">
+              Comprehensive typesetting, layout design, and digital document preparation for multi-stakeholder enterprise risk consulting.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800 text-[11px] text-pink-400 font-semibold flex items-center justify-between">
+            <span>Result: Executive Sign-off</span>
+            <i class="ph ph-arrow-up-right text-base"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Insights & Articles -->
+  <section id="insights" class="py-24 px-6 border-t border-slate-900">
+    <div class="max-w-7xl mx-auto">
+      <div data-aos="fade-up" class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs uppercase tracking-widest text-brand-magenta font-bold mb-3">Knowledge & Perspectives</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-white">Insights & Technology Articles</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <article data-aos="fade-up" data-aos-delay="100" class="p-6 rounded-2xl bg-brand-card border border-slate-800 hover:border-slate-700 transition-colors">
+          <span class="text-[10px] uppercase tracking-wider font-bold text-purple-400">Data Strategy</span>
+          <h4 class="text-lg font-bold text-white mt-3 mb-2">Why Nigerian SMEs Lose Money on Uncleaned Data</h4>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            How duplicate entries, irregular records, and disconnected Excel sheets obscure true inventory profits—and how basic BI fixes it.
+          </p>
+          <a href="#contact" class="text-xs font-semibold text-brand-magenta hover:underline flex items-center gap-1">Read Briefing <i class="ph ph-arrow-right"></i></a>
+        </article>
+
+        <article data-aos="fade-up" data-aos-delay="200" class="p-6 rounded-2xl bg-brand-card border border-slate-800 hover:border-slate-700 transition-colors">
+          <span class="text-[10px] uppercase tracking-wider font-bold text-blue-400">AI Automation</span>
+          <h4 class="text-lg font-bold text-white mt-3 mb-2">Practical AI Agents for Workplace Administration</h4>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Moving beyond simple chat: how automated pipelines summarize reports, route client requests, and eliminate administrative drag.
+          </p>
+          <a href="#contact" class="text-xs font-semibold text-blue-400 hover:underline flex items-center gap-1">Read Briefing <i class="ph ph-arrow-right"></i></a>
+        </article>
+
+        <article data-aos="fade-up" data-aos-delay="300" class="p-6 rounded-2xl bg-brand-card border border-slate-800 hover:border-slate-700 transition-colors">
+          <span class="text-[10px] uppercase tracking-wider font-bold text-pink-400">ICT Procurement</span>
+          <h4 class="text-lg font-bold text-white mt-3 mb-2">What to Inspect When Procuring Corporate IT Equipment</h4>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            A practical checklist for corporate buyers evaluating enterprise warranties, certified hardware sourcing, and power protections.
+          </p>
+          <a href="#contact" class="text-xs font-semibold text-pink-400 hover:underline flex items-center gap-1">Read Briefing <i class="ph ph-arrow-right"></i></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Interactive FAQs Section -->
+  <section id="faqs" class="py-24 px-6 bg-slate-950/70 border-t border-slate-900">
+    <div class="max-w-4xl mx-auto">
+      <div data-aos="fade-up" class="text-center mb-16">
+        <h2 class="text-xs uppercase tracking-widest text-brand-magenta font-bold mb-3">Answers</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-white">Frequently Asked Questions</p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <div class="faq-item rounded-2xl bg-brand-card border border-slate-800 p-5 transition-all">
+          <button class="faq-btn w-full flex items-center justify-between text-left font-bold text-white text-base">
+            <span>What is the typical turnaround time for a website or custom system?</span>
+            <i class="ph ph-caret-down text-lg text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden mt-4 pt-4 border-t border-slate-800 text-xs text-slate-300 leading-relaxed">
+            Standard corporate websites and portfolio portals deploy within 5 to 10 working days. Complex data dashboards, customized business software, or multi-stage automations typically range from 2 to 4 weeks based on agreed scope.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-2xl bg-brand-card border border-slate-800 p-5 transition-all">
+          <button class="faq-btn w-full flex items-center justify-between text-left font-bold text-white text-base">
+            <span>Do we own the website code, domain, and data files completely?</span>
+            <i class="ph ph-caret-down text-lg text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden mt-4 pt-4 border-t border-slate-800 text-xs text-slate-300 leading-relaxed">
+            Yes, 100%. Upon final delivery, all GitHub repositories, hosting credentials, Figma/Canva design files, and Power BI models are fully transferred into your direct ownership. There is zero lock-in.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-2xl bg-brand-card border border-slate-800 p-5 transition-all">
+          <button class="faq-btn w-full flex items-center justify-between text-left font-bold text-white text-base">
+            <span>Can J-Tech supply and install physical ICT hardware for corporate tenders?</span>
+            <i class="ph ph-caret-down text-lg text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden mt-4 pt-4 border-t border-slate-800 text-xs text-slate-300 leading-relaxed">
+            Yes. As a registered business enterprise in Nigeria (BN: 8763933), we fulfill procurement contracts for certified enterprise computers, networking equipment, printers, and office electronics with manufacturer warranties.
+          </div>
+        </div>
+
+        <div class="faq-item rounded-2xl bg-brand-card border border-slate-800 p-5 transition-all">
+          <button class="faq-btn w-full flex items-center justify-between text-left font-bold text-white text-base">
+            <span>How does your data cleaning and business intelligence service work?</span>
+            <i class="ph ph-caret-down text-lg text-slate-400 transition-transform"></i>
+          </button>
+          <div class="faq-content hidden mt-4 pt-4 border-t border-slate-800 text-xs text-slate-300 leading-relaxed">
+            We ingest your raw operational spreadsheets (Excel, CSV, databases), audit and eliminate syntax/duplication errors, normalize data types, and build custom interactive Power BI/web dashboards showing key metrics like revenue, inventory, or KPI tracking.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Contact & Direct Inquiry Section -->
+  <section id="contact" class="py-24 px-6 border-t border-slate-900 relative">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Contact Information -->
+      <div data-aos="fade-right" class="lg:col-span-5 space-y-8">
+        <div>
+          <h2 class="text-xs uppercase tracking-widest text-brand-magenta font-bold mb-2">Connect With Us</h2>
+          <p class="text-3xl font-extrabold text-white mb-4">Start Your Engagement</p>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Have a project, corporate procurement requirement, or consultation in mind? Reach out through any of our official channels.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <!-- WhatsApp & Phone -->
+          <a href="https://wa.me/2349078845696" target="_blank" class="flex items-start gap-4 p-4 rounded-xl bg-brand-card border border-slate-800 hover:border-brand-magenta/50 transition-all hover:translate-x-1 block">
+            <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-brand-magenta flex items-center justify-center text-xl shrink-0">
+              <i class="ph ph-phone-call"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-400">Direct Phone & WhatsApp</div>
+              <div class="text-sm font-semibold text-white mt-0.5">+234 907 884 5696</div>
+            </div>
+          </a>
+
+          <!-- Email -->
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-card border border-slate-800 hover:border-blue-500/50 transition-all hover:translate-x-1">
+            <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl shrink-0">
+              <i class="ph ph-envelope-simple"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-400">Official Email</div>
+              <div class="text-sm font-semibold text-white mt-0.5">jtechomnisolutions@gmail.com</div>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="flex items-start gap-4 p-4 rounded-xl bg-brand-card border border-slate-800 hover:border-pink-500/50 transition-all hover:translate-x-1">
+            <div class="w-10 h-10 rounded-lg bg-pink-500/10 text-pink-400 flex items-center justify-center text-xl shrink-0">
+              <i class="ph ph-map-pin"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-400">Headquarters</div>
+              <div class="text-sm font-semibold text-white mt-0.5">Muhammadu Buhari Way, Kaduna, Nigeria</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Media Presence -->
+        <div class="pt-2">
+          <h4 class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-3">Official Channels</h4>
+          <div class="flex items-center gap-3">
+            <a href="https://youtube.com/@j-techomni2026?si=aY_J4TXnlSv3XwJs" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-red-400 hover:border-red-500/40 text-sm font-medium transition-all">
+              <i class="ph-fill ph-youtube-logo text-lg text-red-500"></i>
+              <span>YouTube</span>
+            </a>
+            <a href="https://www.facebook.com/share/19gyzfpRtL/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-blue-400 hover:border-blue-500/40 text-sm font-medium transition-all">
+              <i class="ph-fill ph-facebook-logo text-lg text-blue-500"></i>
+              <span>Facebook</span>
+            </a>
+            <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-purple-500/40 text-sm font-medium transition-all" title="Twitter / X handle coming soon">
+              <i class="ph-bold ph-x-logo text-base"></i>
+              <span>Twitter</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Direct Message Form -->
+      <div data-aos="fade-left" class="lg:col-span-7 bg-brand-card border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl">
+        <h3 class="text-xl font-bold text-white mb-6">Send an Inquiry or RFP</h3>
+        <form action="https://formspree.io/f/your_formspree_id" method="POST" class="space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Full Name</label>
+              <input type="text" name="name" required placeholder="e.g. John Doe" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-brand-magenta transition-colors" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Email Address</label>
+              <input type="email" name="email" required placeholder="e.g. name@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-brand-magenta transition-colors" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Service Required</label>
+              <select name="service" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-300 text-sm focus:outline-none focus:border-brand-magenta transition-colors">
+                <option value="ICT & IT Solutions">ICT & IT Solutions</option>
+                <option value="Data Management & Business Intelligence">Data Management & Business Intelligence</option>
+                <option value="AI Integration & Automation">AI Integration & Automation</option>
+                <option value="Creative & Digital Design">Creative & Digital Design</option>
+                <option value="Publishing & Document Services">Publishing & Document Services</option>
+                <option value="General Contracts & Equipment Supply">General Contracts & Equipment Supply</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Your Industry</label>
+              <select name="industry" class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-300 text-sm focus:outline-none focus:border-brand-magenta transition-colors">
+                <option value="Corporate Organization">Corporate Organization</option>
+                <option value="Government / Public Sector">Government / Public Sector</option>
+                <option value="SME / Growing Business">SME / Growing Business</option>
+                <option value="NGO / Development Agency">NGO / Development Agency</option>
+                <option value="Education / Healthcare">Education / Healthcare</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Project Brief / Scope</label>
+            <textarea name="message" rows="4" required placeholder="Describe your project, timelines, or procurement specifications..." class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-brand-magenta transition-colors"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-4 rounded-xl bg-gradient-to-r from-brand-purple to-brand-magenta hover:opacity-95 text-white font-bold transition-all duration-300 shadow-lg shadow-purple-600/30 flex items-center justify-center gap-2 hover:scale-[1.01]">
+            <span>Send Project Inquiry</span>
+            <i class="ph ph-paper-plane-tilt"></i>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp Action Button -->
+  <a href="https://wa.me/2349078845696?text=Hello%20J-Tech%20Omni%20Solutions,%20I'm%20contacting%20you%20from%20your%20website." target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-2xl flex items-center justify-center text-3xl transition-transform hover:scale-110 active:scale-95" title="Chat on WhatsApp">
+    <i class="ph-fill ph-whatsapp-logo"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer class="py-12 border-t border-slate-900 bg-black/60 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="text-center md:text-left">
+        <p class="font-semibold text-white">&copy; 2026 J-Tech Omni Solutions. All rights reserved.</p>
+        <p class="text-slate-500 mt-1">Enterprise Registration BN: 8763933 &bull; Kaduna, Nigeria</p>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#services" class="hover:text-brand-magenta transition-colors">Services</a>
+        <a href="#about" class="hover:text-brand-magenta transition-colors">About</a>
+        <a href="#industries" class="hover:text-brand-magenta transition-colors">Industries</a>
+        <a href="#projects" class="hover:text-brand-magenta transition-colors">Projects</a>
+        <a href="#contact" class="hover:text-brand-magenta transition-colors">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="https://youtube.com/@j-techomni2026?si=aY_J4TXnlSv3XwJs" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-red-400 hover:border-red-500/50 transition-colors">
+          <i class="ph-fill ph-youtube-logo text-lg"></i>
+        </a>
+        <a href="https://www.facebook.com/share/19gyzfpRtL/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-blue-400 hover:border-blue-500/50 transition-colors">
+          <i class="ph-fill ph-facebook-logo text-lg"></i>
+        </a>
+        <a href="#" class="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white hover:border-purple-500/50 transition-colors">
+          <i class="ph-bold ph-x-logo text-base"></i>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- AOS Animations & FAQ Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 60
+    });
+
+    // Mobile Hamburger Menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      if (isHidden) {
+        menuIcon.classList.replace('ph-x', 'ph-list');
+      } else {
+        menuIcon.classList.replace('ph-list', 'ph-x');
+      }
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.replace('ph-x', 'ph-list');
+      });
+    });
+
+    // Accordion FAQs Handler
+    const faqBtns = document.querySelectorAll('.faq-btn');
+    faqBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('i');
+        const isClosed = content.classList.contains('hidden');
+        
+        // Close other FAQs
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-btn i').forEach(i => i.classList.remove('rotate-180'));
+
+        if (isClosed) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
