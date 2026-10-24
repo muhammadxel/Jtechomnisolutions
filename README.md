@@ -1,2 +1,2 @@
-# Jtech-Website
-A first version of a Tech Website created by owner
+# Jtechomnisolutions-Website
+A updated version of a Tech Website created by owner
